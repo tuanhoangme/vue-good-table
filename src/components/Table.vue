@@ -38,7 +38,7 @@
               <slot name="table-column" :column="column">
                 <span>
                   {{column.label}}
-                    <i v-if="column.tooltip" class="material-icons help-tooltip" data-container="body" data-animation="false" data-toggle="tooltip" data-placement="right" data-trigger="hover" :title="column.tooltip">help_outline</i>
+                    <i v-if="column.tooltip" class="material-icons help-tooltip" data-container="body" data-animation="false" data-toggle="tooltip" :data-placement="column.tooltip_position" data-trigger="hover" :title="column.tooltip">help_outline</i>
                 </span>
               </slot>
             </th>
