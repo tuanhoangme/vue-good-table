@@ -36,7 +36,12 @@
               :style="{width: column.width ? column.width : 'auto'}"
               v-if="!column.hidden">
               <slot name="table-column" :column="column">
-                <span>{{column.label}}</span>
+                <span>
+                  {{column.label}}
+                  <span v-if="column.tooltip" class="tooltip-wrapper">
+                    <i class="material-icons help-tooltip" data-container="body" data-animation="false" data-toggle="tooltip" data-placement="right" data-trigger="hover" :title="column.tooltip">help_outline</i>
+                  </span>
+                </span>
               </slot>
             </th>
             <slot name="thead-tr"></slot>
